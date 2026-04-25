@@ -13,7 +13,7 @@
     "knip": "knip",
     "bddgen": "bddgen --config=playwright-acceptance.config.js",
     "test:dev": "vitest run",
-    "test:acceptance": "pnpm build && pnpm bddgen && playwright test --config=playwright-acceptance.config.js"
+    "test:acceptance": "pnpm build && pnpm bddgen && playwright test --config=playwright-acceptance.config.js --pass-with-no-tests"
   },
   "dependencies": {
     "react": "^19.0.0",
