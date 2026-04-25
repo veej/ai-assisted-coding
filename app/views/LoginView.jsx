@@ -3,13 +3,14 @@ import { signIn } from "~/lib/auth.js";
 
 export function LoginView({ onSignedIn }) {
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
 
   function handleSubmit(event) {
     event.preventDefault();
-    const user = signIn(email);
+    const user = signIn(email, password);
     if (!user) {
-      setError("We don't recognise that email.");
+      setError("Email or password not recognised.");
       return;
     }
     onSignedIn(user);
@@ -30,6 +31,19 @@ export function LoginView({ onSignedIn }) {
               value={email}
               onChange={(event) => {
                 setEmail(event.target.value);
+                if (error) setError(null);
+              }}
+            />
+          </label>
+          <label className="auth-form__field">
+            <span>Password</span>
+            <input
+              type="password"
+              autoComplete="current-password"
+              required
+              value={password}
+              onChange={(event) => {
+                setPassword(event.target.value);
                 if (error) setError(null);
               }}
             />

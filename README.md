@@ -13,12 +13,14 @@ Open <http://localhost:5173>.
 
 ### Sign-in
 
-Two emails are recognised:
+Two accounts are seeded:
 
-- `admin@foyer.local` — admin
-- `user@foyer.local` — regular user
+| Email               | Password | Role         |
+| ------------------- | -------- | ------------ |
+| `admin@foyer.local` | `admin`  | admin        |
+| `user@foyer.local`  | `user`   | regular user |
 
-There is no password. Session is kept in `localStorage`.
+Session is kept in `localStorage`.
 
 ## Scripts
 
