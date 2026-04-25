@@ -1,0 +1,31 @@
+.DS_Store
+.env
+.env.local
+/node_modules/
+.pnpm-store/
+
+# Vite
+/dist/
+/build/
+
+# Playwright test outputs
+test-results/
+test-results-acceptance/
+playwright-report/
+playwright-report-acceptance/
+playwright/.cache/
+
+# playwright-bdd generated test files
+.features-gen/
+
+# playwright-cli session cache
+.playwright-cli/
+
+# Demo skill ephemeral artifacts
+tests/demo/
+
+# Claude Code local settings
+.claude/settings.local.json
+.claude/plans/
+.claude/worktrees/
+.github-auth.json

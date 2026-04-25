@@ -1,0 +1,16 @@
+# Build artifacts
+build
+dist
+coverage
+
+# Agent skills
+.agents/skills
+.claude/skills
+.cursor/skills
+
+# Auto-generated
+.features-gen
+
+*.css
+*.yaml
+*.yml

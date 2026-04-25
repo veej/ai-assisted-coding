@@ -1,0 +1,35 @@
+{
+  "name": "foyer",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint app",
+    "lint:fix": "eslint --fix app",
+    "prettier": "prettier --write .",
+    "prettier-check": "prettier --check \"**/*.{js,jsx,html,css,md}\"",
+    "knip": "knip",
+    "bddgen": "bddgen --config=playwright-acceptance.config.js",
+    "test:dev": "vitest run",
+    "test:acceptance": "pnpm build && pnpm bddgen && playwright test --config=playwright-acceptance.config.js"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@playwright/test": "^1.50.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "eslint": "^9.0.0",
+    "eslint-plugin-react": "^7.37.0",
+    "globals": "^15.0.0",
+    "knip": "^5.0.0",
+    "playwright-bdd": "^8.0.0",
+    "prettier": "^3.0.0",
+    "vite": "^7.0.0",
+    "vitest": "^4.0.0"
+  }
+}
