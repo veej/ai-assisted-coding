@@ -98,6 +98,18 @@ h3 {
   color: var(--foyer-accent);
 }
 
+.navbar__link {
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: var(--foyer-fg);
+  padding: 0.375rem 0.5rem;
+  border-radius: 6px;
+}
+
+.navbar__link:hover {
+  background: var(--foyer-bg);
+}
+
 /* ---------- Banner ---------- */
 
 .banner {
@@ -204,4 +216,122 @@ h3 {
 
 .auth-form__submit:hover {
   filter: brightness(1.05);
+}
+
+/* ---------- Settings ---------- */
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 480px;
+  margin-top: 1rem;
+}
+
+.settings-form__hint {
+  margin: 0 0 1rem;
+  color: var(--foyer-muted);
+}
+
+.settings-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.settings-form__field span {
+  font-size: 0.875rem;
+  color: var(--foyer-muted);
+}
+
+.settings-form__field input {
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--foyer-border);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: var(--foyer-surface);
+}
+
+.settings-form__field input:focus {
+  outline: 2px solid var(--foyer-accent);
+  outline-offset: 1px;
+  border-color: var(--foyer-accent);
+}
+
+.settings-form__accents {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid var(--foyer-border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem 1rem;
+  margin: 0;
+}
+
+.settings-form__accents legend {
+  padding: 0 0.375rem;
+  font-size: 0.875rem;
+  color: var(--foyer-muted);
+}
+
+.accent-radio {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.375rem 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.accent-radio:hover {
+  background: var(--foyer-bg);
+}
+
+.accent-radio input[type="radio"] {
+  accent-color: var(--foyer-swatch);
+}
+
+.accent-radio--sky {
+  --foyer-swatch: var(--foyer-accent-sky);
+}
+.accent-radio--amber {
+  --foyer-swatch: var(--foyer-accent-amber);
+}
+.accent-radio--emerald {
+  --foyer-swatch: var(--foyer-accent-emerald);
+}
+.accent-radio--rose {
+  --foyer-swatch: var(--foyer-accent-rose);
+}
+
+.accent-radio span {
+  font-size: 0.95rem;
+}
+
+.settings-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.settings-form__cancel,
+.settings-form__save {
+  padding: 0.625rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid var(--foyer-border);
+  background: var(--foyer-surface);
+  color: var(--foyer-fg);
+}
+
+.settings-form__save {
+  background: var(--foyer-accent);
+  color: white;
+  border-color: var(--foyer-accent);
+}
+
+.settings-form__save:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
