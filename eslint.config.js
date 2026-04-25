@@ -23,6 +23,7 @@ export default [
     },
     rules: {
       "react/no-unescaped-entities": "off",
+      "react/prop-types": "off",
       "no-unused-vars": [
         "error",
         {
