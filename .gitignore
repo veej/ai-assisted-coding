@@ -11,8 +11,10 @@
 # Playwright test outputs
 test-results/
 test-results-acceptance/
+test-results-e2e/
 playwright-report/
 playwright-report-acceptance/
+playwright-report-e2e/
 playwright/.cache/
 
 # playwright-bdd generated test files
@@ -23,6 +25,8 @@ playwright/.cache/
 
 # Demo skill ephemeral artifacts
 tests/demo/
+tests/e2e/
+playwright-e2e.config.js
 
 # Claude Code local settings
 .claude/settings.local.json
