@@ -1,0 +1,19 @@
+{
+  "enabledPlugins": {
+    "claude-md-management@claude-plugins-official": true
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "if": "Bash(git push*)",
+            "command": "echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"additionalContext\":\"PRE-PUSH REMINDER: Before pushing, confirm you have: (1) run local CI checks (typecheck, lint, knip), (2) verified the change works per the Verification section in .claude/workflow.md, (3) checked for unintended file changes with git diff.\"}}'"
+          }
+        ]
+      }
+    ]
+  }
+}
