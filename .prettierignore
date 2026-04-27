@@ -3,10 +3,10 @@ build
 dist
 coverage
 
-# Agent skills
-.agents/skills
-.claude/skills
-.cursor/skills
+# Agent scaffolding (skills, rules, workflow docs)
+.agents
+.claude
+.cursor
 
 # Auto-generated
 .features-gen
