@@ -7,7 +7,7 @@ Two suites, each with a distinct purpose. Choose the right one for what you're v
 | Suite          | Tool             | Location                 | Purpose                                                                   |
 | -------------- | ---------------- | ------------------------ | ------------------------------------------------------------------------- |
 | **Dev tests**  | Vitest (+ jsdom) | `app/**/*.test.{js,jsx}` | Fast tests for pure logic and non-trivial component invariants            |
-| **Acceptance** | Playwright-BDD   | `tests/acceptance/`      | Gherkin scenarios derived from approved AC — the canonical behaviour spec |
+| **Acceptance** | Playwright-BDD   | `tests/acceptance/`      | Gherkin scenarios derived from approved requirements — the canonical behaviour spec |
 
 ## Dev Tests (Vitest)
 
@@ -28,7 +28,7 @@ Use `@testing-library/react` to render components in isolation. Don't use compon
 
 ## Acceptance Testing (BDD)
 
-The canonical behaviour spec. Scenarios are written **before** implementation from approved AC (see Phase 1 of `.claude/workflow.md`).
+The canonical behaviour spec. Scenarios are written **before** implementation from approved requirements (see Phase 1 of `.claude/workflow.md`).
 
 ```bash
 pnpm bddgen      # Generate test files from .feature files (required first)
@@ -49,7 +49,7 @@ Tag-based, configured in `tests/acceptance/fixtures.js`:
 ### Writing scenarios
 
 - Keep Gherkin free of test data — express business requirements only.
-- Tag scenarios with the requirement ID (`@R.1`, `@R.2`, …).
+- If the source requirements are numbered (e.g., `R.1`, `R.2`), tag each scenario with its requirement ID (`@R.1`, `@R.2`, …). Skip the tag when requirements aren't numbered.
 - Update `tests/acceptance/test-plan.yaml` with coverage status.
 - Use page objects from `tests/acceptance/pages/` (one per view) to encapsulate selectors and common actions.
 

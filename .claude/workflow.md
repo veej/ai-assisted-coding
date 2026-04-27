@@ -10,23 +10,26 @@ to adapt when prior work already exists.
 
 ## Phase 0: Challenge Requirements
 
-Before writing code, run `/challenge-ac` to analyse the acceptance criteria for gaps,
-ambiguities, and edge cases. The user will provide the AC source (Notion link, Confluence
-link, local file, or pasted text) and optionally Figma design links.
+Before writing code, run `/challenge-reqs` to analyse the feature's source documentation
+for gaps, ambiguities, and edge cases. The user will provide the documentation
+(Notion link, Confluence link, local file, pasted text, or any other form) and
+optionally Figma design links.
 
 When extending an existing feature, challenge only the new or changed requirements —
 use the existing `.feature` files and `test-plan.yaml` as context.
 
-- Run `/challenge-ac` with the AC source and any Figma links
-- User resolves open questions with the relevant people (PM, designers, dev lead)
-- Output: a clear, agreed-upon scope
+- Run `/challenge-reqs` with the source documentation and any Figma links
+- Output: a structured list of open questions grouped by audience (PM, designers, dev lead)
 
-## Phase 1: Test Plan (for features with AC)
+The user takes the questions to the relevant people; once answered, the resolved
+scope feeds Phase 1.
+
+## Phase 1: Test Plan
 
 Using the clarified requirements from Phase 0:
 
 - Propose `.feature` file(s) with Gherkin scenarios
-- Map each scenario to a requirement tag (`@R.N`) from the spec
+- If the source requirements are numbered, map each scenario to its requirement tag (`@R.N`); otherwise skip the mapping
 - Keep Gherkin free of test data — express business requirements only
 - Update `tests/acceptance/test-plan.yaml`
 - STOP: user must approve `.feature` files before proceeding
