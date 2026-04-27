@@ -36,5 +36,5 @@ Before starting work, read the sub-file(s) relevant to your task:
 - **`.claude/git_workflow.md`** — Read before any commit, push, PR creation, or merge
 - **`.claude/design_system_rules.md`** — Read before creating or modifying UI components, working with colors, typography, or spacing
 - **`.claude/testing_rules.md`** — Read before writing or modifying any tests (dev, acceptance)
-- **`.claude/coding_patterns.md`** — Read before working on app code (state, persistence, view switching)
+- **`.claude/coding_patterns.md`** — Read before working on app code (persistence boundary, component variants, conventions)
 - **`.claude/workflow.md`** — You MUST read this file before starting any code change and follow its phases. No exceptions.
