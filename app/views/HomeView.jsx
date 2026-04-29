@@ -2,12 +2,16 @@ import { Banner } from "~/components/Banner.jsx";
 import { NavBar } from "~/components/NavBar.jsx";
 import { getBanner } from "~/lib/banner.js";
 
-export function HomeView({ session, onSignOut }) {
+export function HomeView({ session, onSignOut, onNavigateToSettings }) {
   const banner = getBanner();
 
   return (
     <>
-      <NavBar session={session} onSignOut={onSignOut} />
+      <NavBar
+        session={session}
+        onSignOut={onSignOut}
+        onNavigateToSettings={onNavigateToSettings}
+      />
       <main className="app-shell">
         <Banner message={banner.message} accent={banner.accent} />
         <section className="home-intro">

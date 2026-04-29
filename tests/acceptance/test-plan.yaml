@@ -1,0 +1,25 @@
+specs:
+  - id: configurable-banner
+    source: docs/specs/configurable-banner.md
+    requirements:
+      - id: R.1
+        summary: Admin can change the welcome message
+        scenarios:
+          - feature: configurable-banner.feature
+            scenario: Admin updates the banner message
+            status: covered
+          - feature: configurable-banner.feature
+            scenario: An empty message cannot be saved
+            status: covered
+      - id: R.2
+        summary: Admin can change the banner accent colour
+        scenarios:
+          - feature: configurable-banner.feature
+            scenario: Admin changes the accent colour
+            status: covered
+      - id: R.3
+        summary: Regular user cannot reach the settings page and is not shown an entry point to it
+        scenarios:
+          - feature: configurable-banner.feature
+            scenario: A regular user does not see the settings link
+            status: covered

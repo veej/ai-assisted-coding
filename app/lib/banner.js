@@ -16,3 +16,16 @@ export function getBanner() {
     return DEFAULT;
   }
 }
+
+export function setBanner({ message, accent }) {
+  if (typeof message !== "string" || message.trim().length === 0) {
+    throw new Error("Banner message cannot be empty");
+  }
+  if (!ACCENTS.includes(accent)) {
+    throw new Error(`Unknown accent: ${accent}`);
+  }
+  localStorage.setItem(
+    KEY,
+    JSON.stringify({ message: message.trim(), accent }),
+  );
+}
